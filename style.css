@@ -1,0 +1,259 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500&family=Oxygen:wght@300;400;700&family=Roboto:wght@300;400;500;700;900&family=Varela+Round&display=swap');
+body{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	color: var(--theme-color);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+@media all and (min-width: 992px) {
+	.navbar .nav-item .dropdown-menu{ display: none; }
+	.navbar .nav-item:hover .nav-link{   }
+	.navbar .nav-item:hover .dropdown-menu{ display: block; }
+	.navbar .nav-item .dropdown-menu{ margin-top:0; }
+}
+
+:root {
+   --theme-color: #051929;
+   --theme-color--two: #35589A;
+   --box-shadow: box-shadow: #959da533 0px 8px 24px;
+}
+
+/* ==================== Navbar start ====================== */
+
+.navbar{
+	background-color: #fff;
+	padding: 1rem 0;
+}
+
+.nav-area{
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	z-index: 999;
+}
+
+.navbar-brand{
+	color: var(--theme-color);
+	font-weight: 700;
+	font-size: 1.5rem;
+}
+
+.navbar-nav li{
+	margin: 0 1rem;
+	color: #000;
+	transition: 1s;
+}
+
+.navbar-nav li a:hover{
+	color: var(--theme-color--two);
+}
+
+.navbar-nav li a{
+	color: #000;
+}
+
+/* ==================== Navbar End ====================== */
+
+
+/* ==================== Hero Start ====================== */
+.hero-area{
+    background:linear-gradient(0deg, #00143ae7, #35589a9a), url(images/heroImg.jpg);
+    width: 100%;
+    background-size: cover;
+    height: 100vh;
+    object-fit: cover;
+     background-color: #000000;
+     position: relative;
+}
+
+.hero-content{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #fff;
+}
+
+.title{
+    font-family: 'Oswald', sans-serif;
+}
+
+.hero-content h1{
+    font-family: 'Oswald', sans-serif;
+}
+
+.hero-content a{
+    background-color: #fff;
+    text-decoration: none;
+    color: var(--theme-color);
+    padding: .8rem 2rem;
+    font-size: 1.2rem;
+}
+
+/* ==================== Hero End ====================== */
+
+/* ==================== Card Start ====================== */
+.single-card{
+    border: 2px solid #eee;
+}
+.single-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+/* ==================== Card End ====================== */
+
+
+/* ==================== Owner Committee Start ====================== */
+.single-committee{
+    text-align: center;
+    border: 2px solid #eee;
+}
+.single-committee img{
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+/* ==================== Owner Committee End ====================== */
+
+
+/* ==================== Brand Start ====================== */
+.brand-bar-img img{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.brand-bar-content{
+    background-color: var(--theme-color);
+    color: #fff;
+    padding: 1rem 2rem 1rem 1rem;
+}
+
+.brand-grid{
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    grid-gap: 10px;
+    text-align: center;
+}
+
+.brand-logo img{
+    width: 50%;
+}
+
+.brand-logo{
+    background-color: #eee;
+    padding: 2rem 1rem;
+    border-radius: .2rem;
+}
+/* ==================== Brand End ====================== */
+
+/* ==================== Footer Start ====================== */
+.footer-area{
+	background-color: var(--theme-color);
+	color: #fff;
+	padding: 2rem 0;
+	position: relative;
+}
+
+.single-footer{
+	margin-top: 1rem;
+}
+
+.single-footer ul{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.single-footer ul li a{
+	text-decoration: none;
+	color: #fff;
+}
+
+.single-footer ul li a, .single-footer p{
+	color: #b1b1b1;
+}
+
+.single-footer ul li{
+	transition: .5s ease-in-out;
+	margin: .5rem 0;
+}
+
+.single-footer ul li:hover{
+	transform: translateX(5px);
+	color: #F0202E;
+}
+
+.single-footer ul li a:hover{
+	color: #F0202E;
+}
+
+.social-links{
+	margin-top: 2rem;
+}
+
+.social-links a{
+	color: var(--theme-color);
+	background-color: #fff;
+	padding: 8px 10px;
+	border-radius: 50%;
+	font-size: 1rem;
+	transition: .5s;
+}
+
+.social-links a:hover{
+	color: #fff;
+	background-color: var(--theme-color--two);
+}
+
+.footer-box{
+	color: var(--theme-color);
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	align-items: center;
+}
+
+.copyright{
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	background-color: #011d33;
+	color: #fff;
+	padding: 1rem 0 0 0;
+	font-weight: 300;
+}
+
+.copyright p a{
+	text-decoration: none;
+	color: var(--theme-color--two);
+	font-weight: 400;
+}
+
+/* ==================== Footer End ====================== */
+
+/* Responsive Code Start From Here */
+@media only screen and (max-width: 768px) {
+    .brand-grid{
+    grid-template-columns: repeat(3,1fr);
+}
+.hero-area{
+    height: 80vh;
+}
+}
+
+@media only screen and (max-width: 400px) {
+    .brand-grid{
+    grid-template-columns: repeat(2,1fr);
+}
+.hero-area{
+    height: 70vh;
+}
+}
+/* Responsive Code Start From Here */
+
+
+
