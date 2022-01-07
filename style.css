@@ -26,7 +26,6 @@ body{
 
 .navbar{
 	background-color: #fff;
-	padding: 1rem 0;
 }
 
 .nav-area{
@@ -41,6 +40,11 @@ body{
 	color: var(--theme-color);
 	font-weight: 700;
 	font-size: 1.5rem;
+}
+
+.navbar-nav{
+    margin: 0;
+    padding: 0;
 }
 
 .navbar-nav li{
@@ -74,7 +78,9 @@ body{
 .hero-content{
     position: absolute;
     top: 50%;
-    transform: translateY(-50%);
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
     color: #fff;
 }
 
@@ -92,6 +98,13 @@ body{
     color: var(--theme-color);
     padding: .8rem 2rem;
     font-size: 1.2rem;
+    border: 1px solid #fff;
+    transition: .2s ease-in-out;
+}
+
+.hero-content a:hover{
+    background: none;
+    color: #fff;
 }
 
 /* ==================== Hero End ====================== */
@@ -160,8 +173,8 @@ body{
 	position: relative;
 }
 
-.single-footer{
-	margin-top: 1rem;
+.single-footer p{
+	color: #b1b1b1;
 }
 
 .single-footer ul{
@@ -186,11 +199,10 @@ body{
 
 .single-footer ul li:hover{
 	transform: translateX(5px);
-	color: #F0202E;
 }
 
 .single-footer ul li a:hover{
-	color: #F0202E;
+	color: #fff;
 }
 
 .social-links{
@@ -200,8 +212,8 @@ body{
 .social-links a{
 	color: var(--theme-color);
 	background-color: #fff;
-	padding: 8px 10px;
-	border-radius: 50%;
+	padding: 10px;
+	border-radius: .2rem;
 	font-size: 1rem;
 	transition: .5s;
 }
@@ -235,6 +247,11 @@ body{
 	font-weight: 400;
 }
 
+.contact a, address{
+    text-decoration: none;
+    color: #b1b1b1;
+}
+
 /* ==================== Footer End ====================== */
 
 /* Responsive Code Start From Here */
@@ -245,11 +262,33 @@ body{
 .hero-area{
     height: 80vh;
 }
+
+.navbar-nav li{
+    background-color: #eee;
+    margin: .2rem 0;
+    padding: .2rem .5rem;
+}
+.navbar-nav li:hover{
+    background-color: #ddd;
+}
+.hero-content a{
+    padding: .6rem 1rem;
+    font-size: 1rem;
+}
+}
+
+@media only screen and (max-width: 600px) {
+    .hero-content p{
+        font-size: 12px;
+    }
 }
 
 @media only screen and (max-width: 400px) {
     .brand-grid{
     grid-template-columns: repeat(2,1fr);
+}
+.hero-content h1{
+    font-size: 18px;
 }
 .hero-area{
     height: 70vh;
